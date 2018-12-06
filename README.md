@@ -63,5 +63,22 @@ infermedica.postTriage(context).then(res => {
 
 `infermedica.postParse({ text, context, concept_types, correct_spelling, include_tokens })` Returns list of mentions of observation found in given text <br/>
 
+`infermedica.getRiskFactors()` Returns a list of all available risk factors <br/>
+
+`infermedica.getRiskFactor(riskFactorId)` Returns details of a single risk factor specified by id parameter <br/>
+
+`infermedica.getRiskFactors()` Returns a list of all available risk factors <br/>
+
+`infermedica.getRiskFactor(riskFactorId)` Returns details of a single risk factor specified by id parameter <br/>
+
+`infermedica.getSearch({ phrase, sex, maxResults, type })` Returns list of observations matching the given phrase <br/>
+
+`infermedica.postSuggest({ sex, age, evidence, extras, evaluated_at }, max_results)` Suggests possible symptoms based on provided patient information
+
+`infermedica.getSymptoms()` Returns a list of all available symptoms <br/>
+
+`infermedica.getSymptom(symptomId)` Returns details of a single symptom specified by id parameter <br/>
+
+`infermedica.postTriage({ sex, age, evidence, extras, evaluated_at })` Estimates triage level based on provided patient information <br/>
 
 
