@@ -4,6 +4,7 @@ const infermedica = new Infermedica({ appId: '72c76576', appKey: '2c63689dc7de4d
 const context = {
     sex: "male",
     age: 70,
+    target: "c_49",
     evidence: [
         {
             "id": "s_1193",
@@ -19,6 +20,6 @@ const context = {
         }
     ]
 }
-infermedica.postSuggest(context).then(res => {
+infermedica.postExplain(context).then(res => {
     console.log(res)
 })
