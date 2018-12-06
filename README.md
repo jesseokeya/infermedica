@@ -7,7 +7,7 @@ This is a Node interface to the Infermedica REST API: https://developer.infermed
 
 ## Installation
 
-```npm install --save```
+```npm install Infermedica --save```
 
 ## Usage examples
 
@@ -40,3 +40,5 @@ infermedica.postTriage(context).then(res => {
 })
 
 ```
+
+## Infermedica Methods
