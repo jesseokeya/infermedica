@@ -42,11 +42,27 @@ infermedica.postTriage(context).then(res => {
 ```
 
 ## Infermedica Methods
+
 `infermedica.getConditions()` Returns a list of all available conditions. <br/>
+
 `infermedica.getConditions(conditionId)` Returns details of a single condition specified by id parameter <br/>
 
-`infermedica.postDiagnosis()` Suggests possible diagnoses and relevant observations based on provided patient information <br/>
+`infermedica.postDiagnosis({ sex, age, evidence, extras, target, evaluated_at })` Suggests possible diagnoses and relevant observations <br/>
 
-`infermedica.postExplain()` Explains which evidence impact probability of selected condition<br/>
+`infermedica.postExplain({ sex, age, evidence, extras, target, evaluated_at })` Explains which evidence impact probability of selected condition<br/>
 
-`infermedica.getInfo()` Returns information about data used by diagnostic engine. <br/>
+`infermedica.getInfo()` Returns information about data used by diagnostic engine <br/>
+
+`infermedica.labTests()` Returns a list of all available lab tests <br/>
+
+`infermedica.labTest(labTestId)` Returns details of a single lab test specified by id parameter <br/>
+
+`infermedica.lookUp({ phrase, sex })` Returns a single observation matching given phrase <br/>
+
+`infermedica.postParse()` Returns list of mentions of observation found in given text <br/>
+
+`infermedica.postParse({ text, context, concept_types, correct_spelling, include_tokens })` Returns list of mentions of observation found in given text <br/>
+
+
+
+
