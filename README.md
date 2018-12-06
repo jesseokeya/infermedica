@@ -45,43 +45,62 @@ infermedica.postTriage(context).then(res => {
 
 ```js
 
-infermedica.getConditions()` Returns a list of all available conditions.
+// Returns a list of all available conditions
+infermedica.getConditions()`
 
-infermedica.getConditions(conditionId) Returns details of a single condition specified by id parameter 
+//Returns details of a single condition specified by id parameter 
+infermedica.getConditions(conditionId)
 
-infermedica.postDiagnosis({ sex, age, evidence, extras, target, evaluated_at }) Suggests possible diagnoses and relevant observations
+// Suggests possible diagnoses and relevant observations
+infermedica.postDiagnosis({ sex, age, evidence, extras, target, evaluated_at }) 
 
-infermedica.postExplain({ sex, age, evidence, extras, target, evaluated_at }) Explains which evidence impact probability of selected condition
+// Explains which evidence impact probability of selected condition
+infermedica.postExplain({ sex, age, evidence, extras, target, evaluated_at })
 
-infermedica.getInfo() Returns information about data used by diagnostic engine
+// Returns information about data used by diagnostic engine
+infermedica.getInfo() 
 
-infermedica.getLabTests() Returns a list of all available lab tests
+// Returns a list of all available lab tests
+infermedica.getLabTests()
 
-infermedica.getLabTest(labTestId) Returns details of a single lab test specified by id parameter
+// Returns details of a single lab test specified by id parameter
+infermedica.getLabTest(labTestId)
 
-infermedica.getLookUp({ phrase, sex }) Returns a single observation matching given phrase
+// Returns a single observation matching given phrase
+infermedica.getLookUp({ phrase, sex })
 
-infermedica.postParse() Returns list of mentions of observation found in given text
+// Returns list of mentions of observation found in given text
+infermedica.postParse()
 
-infermedica.postParse({ text, context, concept_types, correct_spelling, include_tokens }) Returns list of mentions of observation found in given text
+// Returns list of mentions of observation found in given text
+infermedica.postParse({ text, context, concept_types, correct_spelling, include_tokens })
 
-infermedica.getRiskFactors() Returns a list of all available risk factors
+// Returns a list of all available risk factors
+infermedica.getRiskFactors()
 
-infermedica.getRiskFactor(riskFactorId) Returns details of a single risk factor specified by id parameter
+// Returns details of a single risk factor specified by id parameter
+infermedica.getRiskFactor(riskFactorId) 
 
-infermedica.getRiskFactors() Returns a list of all available risk factors
+// Returns a list of all available risk factors
+infermedica.getRiskFactors()
 
-infermedica.getRiskFactor(riskFactorId) Returns details of a single risk factor specified by id parameter
+// Returns details of a single risk factor specified by id parameter
+infermedica.getRiskFactor(riskFactorId)
 
-infermedica.getSearch({ phrase, sex, maxResults, type }) Returns list of observations matching the given phrase
+// Returns list of observations matching the given phrase
+infermedica.getSearch({ phrase, sex, maxResults, type })
 
-infermedica.postSuggest({ sex, age, evidence, extras, evaluated_at }, max_results) Suggests possible symptoms based on provided patient information
+// Suggests possible symptoms based on provided patient information
+infermedica.postSuggest({ sex, age, evidence, extras, evaluated_at }, max_results)
 
-infermedica.getSymptoms() Returns a list of all available symptoms
+// Returns a list of all available symptoms
+infermedica.getSymptoms()
 
-infermedica.getSymptom(symptomId) Returns details of a single symptom specified by id parameter
+// Returns details of a single symptom specified by id parameter
+infermedica.getSymptom(symptomId)
 
-infermedica.postTriage({ sex, age, evidence, extras, evaluated_at }) Estimates triage level based on provided patient information
+// Estimates triage level based on provided patient information
+infermedica.postTriage({ sex, age, evidence, extras, evaluated_at })
 
 ```
 
