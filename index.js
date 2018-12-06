@@ -1,19 +1,19 @@
 const classes = require('extends-classes')
-const request = require('axios')
-const { Condition, Info, LabTest, LookUp, Search, RiskFactor, Symptom } = require('./lib')
+const axios = require('axios')
+const { Condition, Info, LabTest, LookUp, Search, RiskFactor } = require('./lib/index')
 
-class Infermedica extends classes (Condition, Info, LabTest, LookUp, Search, RiskFactor, Symptom) {
+class Infermedica extends classes(Condition, Info, LabTest, LookUp, Search, RiskFactor ) {
     constructor(options = {}) {
         const { appId, appKey } = options
         const host = 'https://api.infermedica.com/v2'
-        const axios = setHeaders(appId, appKey)
+        axios.defaults.headers.common['app_id'] = appId
+        axios.defaults.headers.common['app_key'] = appKey
         super({ host, axios })
     }
 
-    setHeaders(app_id, app_key) {
-        request.defaults.headers.common['app_id'] = app_id
-        request.defaults.headers.common['app_key'] = app_key
-        return request
+    __call(method, args) {
+        console.log(method)
+        console.log(args)
     }
 }
 
