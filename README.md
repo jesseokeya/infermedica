@@ -1,4 +1,4 @@
-# Infermedica(unofficial)
+# Infermedica (unofficial)
 Node interface to the infermedica REST API
 
 ## Description
