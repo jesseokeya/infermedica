@@ -34,6 +34,7 @@ const context = {
         }
     ]
 }
+
 infermedica.postTriage(context).then(res => {
     console.log(res)
 })
