@@ -11,7 +11,8 @@ const {
     Suggest,
     Explain,
     Parse,
-    Diagnosis
+    Diagnosis,
+    Triage
 } = require('./lib')
 
 const Classes = classes(
@@ -25,7 +26,8 @@ const Classes = classes(
     Suggest,
     Explain,
     Parse,
-    Diagnosis
+    Diagnosis,
+    Triage
 )
 
 class Infermedica extends Classes {
