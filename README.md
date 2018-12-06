@@ -13,7 +13,7 @@ This is a Node interface to the Infermedica REST API: https://developer.infermed
 
 #### Estimate triage level based on provided patient information
 ```js
-const Infermedica = require('../index')
+const Infermedica = require('infermedica')
 const infermedica = new Infermedica({ appId: '', appKey: '' })
 
 const context = {
