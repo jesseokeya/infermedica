@@ -47,41 +47,41 @@ infermedica.postTriage(context).then(res => {
 
 infermedica.getConditions()` Returns a list of all available conditions.
 
-infermedica.getConditions(conditionId) // Returns details of a single condition specified by id parameter 
+infermedica.getConditions(conditionId) Returns details of a single condition specified by id parameter 
 
-infermedica.postDiagnosis({ sex, age, evidence, extras, target, evaluated_at }) // Suggests possible diagnoses and relevant observations
+infermedica.postDiagnosis({ sex, age, evidence, extras, target, evaluated_at }) Suggests possible diagnoses and relevant observations
 
-infermedica.postExplain({ sex, age, evidence, extras, target, evaluated_at }) // Explains which evidence impact probability of selected condition
+infermedica.postExplain({ sex, age, evidence, extras, target, evaluated_at }) Explains which evidence impact probability of selected condition
 
-infermedica.getInfo() // Returns information about data used by diagnostic engine
+infermedica.getInfo() Returns information about data used by diagnostic engine
 
-infermedica.getLabTests() // Returns a list of all available lab tests
+infermedica.getLabTests() Returns a list of all available lab tests
 
-infermedica.getLabTest(labTestId) // Returns details of a single lab test specified by id parameter
+infermedica.getLabTest(labTestId) Returns details of a single lab test specified by id parameter
 
-infermedica.getLookUp({ phrase, sex }) // Returns a single observation matching given phrase
+infermedica.getLookUp({ phrase, sex }) Returns a single observation matching given phrase
 
-infermedica.postParse() // Returns list of mentions of observation found in given text
+infermedica.postParse() Returns list of mentions of observation found in given text
 
-infermedica.postParse({ text, context, concept_types, correct_spelling, include_tokens }) // Returns list of mentions of observation found in given text
+infermedica.postParse({ text, context, concept_types, correct_spelling, include_tokens }) Returns list of mentions of observation found in given text
 
-infermedica.getRiskFactors() // Returns a list of all available risk factors
+infermedica.getRiskFactors() Returns a list of all available risk factors
 
-infermedica.getRiskFactor(riskFactorId) // Returns details of a single risk factor specified by id parameter
+infermedica.getRiskFactor(riskFactorId) Returns details of a single risk factor specified by id parameter
 
-infermedica.getRiskFactors() // Returns a list of all available risk factors
+infermedica.getRiskFactors() Returns a list of all available risk factors
 
-infermedica.getRiskFactor(riskFactorId) // Returns details of a single risk factor specified by id parameter
+infermedica.getRiskFactor(riskFactorId) Returns details of a single risk factor specified by id parameter
 
-infermedica.getSearch({ phrase, sex, maxResults, type }) // Returns list of observations matching the given phrase
+infermedica.getSearch({ phrase, sex, maxResults, type }) Returns list of observations matching the given phrase
 
-infermedica.postSuggest({ sex, age, evidence, extras, evaluated_at }, max_results) // Suggests possible symptoms based on provided patient information
+infermedica.postSuggest({ sex, age, evidence, extras, evaluated_at }, max_results) Suggests possible symptoms based on provided patient information
 
-infermedica.getSymptoms() // Returns a list of all available symptoms
+infermedica.getSymptoms() Returns a list of all available symptoms
 
-infermedica.getSymptom(symptomId) // Returns details of a single symptom specified by id parameter
+infermedica.getSymptom(symptomId) Returns details of a single symptom specified by id parameter
 
-infermedica.postTriage({ sex, age, evidence, extras, evaluated_at }) // Estimates triage level based on provided patient information
+infermedica.postTriage({ sex, age, evidence, extras, evaluated_at }) Estimates triage level based on provided patient information
 
 ```
 
