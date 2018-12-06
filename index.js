@@ -42,6 +42,12 @@ class Infermedica extends Classes {
     __call(method, args) {
         console.log(`'${method}(${args || ''})' is missing!`);
     }
+
+    _handleError(err) {
+       const errType = typeof err
+       if (errType === 'object') {}
+       console.log(errType)
+    }
 }
 
 module.exports = Infermedica
