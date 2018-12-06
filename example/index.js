@@ -4,6 +4,7 @@ const infermedica = new Infermedica({ appId: '', appKey: '' })
 const context = {
     sex: "male",
     age: 70,
+    target: "c_49",
     evidence: [
         {
             "id": "s_1193",
@@ -19,6 +20,8 @@ const context = {
         }
     ]
 }
-infermedica.postTriage(context).then(res => {
+
+// Explains which evidence impact probability of selected condition
+infermedica.postExplain(context).then(res => {
     console.log(res)
 })
