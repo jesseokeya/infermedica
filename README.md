@@ -53,16 +53,15 @@ infermedica.postTriage(context).then(res => {
 
 `infermedica.getInfo()` Returns information about data used by diagnostic engine <br/>
 
-`infermedica.labTests()` Returns a list of all available lab tests <br/>
+`infermedica.getLabTests()` Returns a list of all available lab tests <br/>
 
-`infermedica.labTest(labTestId)` Returns details of a single lab test specified by id parameter <br/>
+`infermedica.getLabTest(labTestId)` Returns details of a single lab test specified by id parameter <br/>
 
-`infermedica.lookUp({ phrase, sex })` Returns a single observation matching given phrase <br/>
+`infermedica.getLookUp({ phrase, sex })` Returns a single observation matching given phrase <br/>
 
 `infermedica.postParse()` Returns list of mentions of observation found in given text <br/>
 
 `infermedica.postParse({ text, context, concept_types, correct_spelling, include_tokens })` Returns list of mentions of observation found in given text <br/>
-
 
 
 
