@@ -11,7 +11,7 @@ This is a Node interface to the Infermedica REST API: https://developer.infermed
 
 ## Usage examples
 
-#### Fetching symptoms
+#### Estimate triage level based on provided patient information
 ```js
 const Infermedica = require('../index')
 const infermedica = new Infermedica({ appId: '', appKey: '' })
