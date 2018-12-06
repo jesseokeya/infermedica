@@ -1,6 +1,6 @@
 const classes = require('extends-classes')
 const axios = require('axios')
-const { Condition, Info, LabTest, LookUp, Search, RiskFactor } = require('./lib/index')
+const { Condition, Info, LabTest, LookUp, Search, RiskFactor } = require('./lib')
 
 class Infermedica extends classes(Condition, Info, LabTest, LookUp, Search, RiskFactor) {
     constructor(options = {}) {
