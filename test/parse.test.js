@@ -1,9 +1,10 @@
-const Infermedica = require('../index')
-const infermedica = new Infermedica({ appId: '', appKey: '' })
+const infermedica = require('./index')
 
-const context = {
-    "text": "I feel smoach pain but no couoghing today",
-}
-infermedica.postParse(context).then(res => {
-    console.log(res)
+test('postParse()', async () => {
+    const context = {
+        "text": "I feel smoach pain but no couoghing today",
+    }
+    const parse = await infermedica.postParse(context)
+    expect(typeof parse).toEqual('object')
+    expect(parse).toMatchObject(parse)
 })

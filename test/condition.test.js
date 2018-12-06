@@ -1,5 +1,12 @@
-const sum = require('./sum');
+const infermedica = require('./')
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('getConditions()', async () => {
+  const conditions = await infermedica.getConditions()
+  expect(conditions).toEqual(expect.arrayContaining(conditions))
+  expect(typeof conditions).toEqual('object')
 });
+
+test('getCondition()', async () => {
+  const condition = await infermedica.getCondition('c_522')
+  expect(condition).toMatchObject(condition);
+})

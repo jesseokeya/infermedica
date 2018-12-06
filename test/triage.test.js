@@ -1,24 +1,26 @@
-const Infermedica = require('../index')
-const infermedica = new Infermedica({ appId: '', appKey: '' })
+const infermedica = require('./index')
 
-const context = {
-    sex: "male",
-    age: 70,
-    evidence: [
-        {
-            "id": "s_1193",
-            "choice_id": "present"
-        },
-        {
-            "id": "s_488",
-            "choice_id": "present"
-        },
-        {
-            "id": "s_418",
-            "choice_id": "present"
-        }
-    ]
-}
-infermedica.postTriage(context).then(res => {
-    console.log(res)
+test('postTriage()', async () => {
+    const context = {
+        sex: "male",
+        age: 70,
+        evidence: [
+            {
+                "id": "s_1193",
+                "choice_id": "present"
+            },
+            {
+                "id": "s_488",
+                "choice_id": "present"
+            },
+            {
+                "id": "s_418",
+                "choice_id": "present"
+            }
+        ]
+    }
+
+    const triage = await infermedica.postTriage(context)
+    expect(typeof triage).toEqual('object')
+    expect(triage).toMatchObject(triage)
 })

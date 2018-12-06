@@ -42,7 +42,7 @@ class Infermedica extends Classes {
     }
 
     __call(method, args) {
-        console.log(`'${method}(${args || ''})' is missing!`);
+        console.log(`${method.toString()}(${args.toString() || ''}) is missing!`);
     }
 
     _handleError(err) {
