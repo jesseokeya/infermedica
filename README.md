@@ -1,5 +1,5 @@
 # Infermedica (unofficial)
-Node interface to the infermedica REST API
+Node interface to the infermedica REST API https://www.npmjs.com/package/infermedica
 
 ## Description
 
@@ -42,3 +42,11 @@ infermedica.postTriage(context).then(res => {
 ```
 
 ## Infermedica Methods
+`infermedica.getConditions()` Returns a list of all available conditions. <br/>
+`infermedica.getConditions(conditionId)` Returns details of a single condition specified by id parameter <br/>
+
+`infermedica.postDiagnosis()` Suggests possible diagnoses and relevant observations based on provided patient information <br/>
+
+`infermedica.postExplain()` Explains which evidence impact probability of selected condition<br/>
+
+`infermedica.getInfo()` Returns information about data used by diagnostic engine. <br/>
