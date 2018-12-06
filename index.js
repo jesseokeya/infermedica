@@ -15,7 +15,6 @@ class Infermedica extends classes (Condition, Info, LabTest, LookUp, Search, Ris
         request.defaults.headers.common['app_key'] = app_key
         return request
     }
-
 }
 
 module.exports = Infermedica
