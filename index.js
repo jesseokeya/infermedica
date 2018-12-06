@@ -1,8 +1,17 @@
 const classes = require('extends-classes')
 const axios = require('axios')
-const { Condition, Info, LabTest, LookUp, Search, RiskFactor } = require('./lib')
+const {
+    Condition,
+    Info,
+    LabTest,
+    LookUp,
+    Search,
+    RiskFactor,
+    Symptom
+} = require('./lib')
 
-class Infermedica extends classes(Condition, Info, LabTest, LookUp, Search, RiskFactor) {
+const Classes = classes(Condition, Info, LabTest, LookUp, Search, RiskFactor, Symptom)
+class Infermedica extends Classes {
     constructor(options = {}) {
         const { appId, appKey } = options
         const host = 'https://api.infermedica.com/v2'
