@@ -70,9 +70,6 @@ infermedica.getLabTest(labTestId)
 infermedica.getLookUp({ phrase, sex })
 
 // Returns list of mentions of observation found in given text
-infermedica.postParse()
-
-// Returns list of mentions of observation found in given text
 infermedica.postParse({ text, context, concept_types, correct_spelling, include_tokens })
 
 // Returns a list of all available risk factors
