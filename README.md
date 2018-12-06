@@ -7,7 +7,7 @@ This is a Node interface to the Infermedica REST API: https://developer.infermed
 
 ## Installation
 
-```npm install Infermedica --save```
+```npm install infermedica --save```
 
 ## Usage examples
 
