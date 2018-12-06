@@ -7,10 +7,11 @@ const {
     LookUp,
     Search,
     RiskFactor,
-    Symptom
+    Symptom,
+    Suggest
 } = require('./lib')
 
-const Classes = classes(Condition, Info, LabTest, LookUp, Search, RiskFactor, Symptom)
+const Classes = classes(Condition, Info, LabTest, LookUp, Search, RiskFactor, Symptom, Suggest)
 class Infermedica extends Classes {
     constructor(options = {}) {
         const { appId, appKey } = options
