@@ -91,7 +91,7 @@ class Infermedica extends Classes {
                     }
             }
         } else {
-            errorCtx = err.toString()
+            errorCtx = err
         }
         errorCtx = JSON.stringify(errorCtx, null, 4)
         throw new Error(errorCtx)
