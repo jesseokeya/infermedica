@@ -267,3 +267,29 @@ infermedica.postParse(context).then(parse => {
     console.log(parse)
 })
 ```
+
+### getRiskFactors
+Returns a list of all available risk factors
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+infermedica.getRiskFactors().then(riskFactors => {
+    console.log(riskFactors)
+})
+```
+
+### getRiskFactor
+Returns details of a single risk factor specified by id parameter
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+infermedica.getRiskFactor('lt_350').then(riskFactor => {
+    console.log(riskFactor)
+})
+```
