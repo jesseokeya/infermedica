@@ -61,10 +61,24 @@ infermedica.getConditions()
 infermedica.getCondition(conditionId)
 
 // Suggests possible diagnoses and relevant observations
-infermedica.postDiagnosis({ sex, age, evidence, extras, target, evaluated_at }) 
+infermedica.postDiagnosis({ 
+    sex, 
+    age, 
+    evidence, 
+    extras, 
+    target, 
+    evaluated_at 
+}) 
 
 // Explains which evidence impact probability of selected condition
-infermedica.postExplain({ sex, age, evidence, extras, target, evaluated_at })
+infermedica.postExplain({ 
+    sex, 
+    age, 
+    evidence, 
+    extras, 
+    target, 
+    evaluated_at 
+})
 
 // Returns information about data used by diagnostic engine
 infermedica.getInfo() 
@@ -79,7 +93,13 @@ infermedica.getLabTest(labTestId)
 infermedica.getLookUp({ phrase, sex })
 
 // Returns list of mentions of observation found in given text
-infermedica.postParse({ text, context, concept_types, correct_spelling, include_tokens })
+infermedica.postParse({ 
+    text, 
+    context, 
+    concept_types, 
+    correct_spelling, 
+    include_tokens 
+})
 
 // Returns a list of all available risk factors
 infermedica.getRiskFactors()
@@ -88,10 +108,20 @@ infermedica.getRiskFactors()
 infermedica.getRiskFactor(riskFactorId) 
 
 // Returns list of observations matching the given phrase
-infermedica.getSearch({ phrase, sex, maxResults, type })
+infermedica.getSearch({ 
+    phrase, 
+    sex, 
+    maxResults, 
+    type 
+})
 
 // Suggests possible symptoms based on provided patient information
-infermedica.postSuggest({ sex, age, evidence, extras, evaluated_at }, max_results)
+infermedica.postSuggest({ 
+    sex, 
+    age, 
+    evidence, 
+    extras, 
+    evaluated_at }, max_results)
 
 // Returns a list of all available symptoms
 infermedica.getSymptoms()
@@ -100,7 +130,13 @@ infermedica.getSymptoms()
 infermedica.getSymptom(symptomId)
 
 // Estimates triage level based on provided patient information
-infermedica.postTriage({ sex, age, evidence, extras, evaluated_at })
+infermedica.postTriage({ 
+    sex, 
+    age, 
+    evidence, 
+    extras, 
+    evaluated_at
+})
 
 ```
 
@@ -325,7 +361,7 @@ const infermedica = new Infermedica({
     appKey: process.env.APP_KEY 
 })
 
-infermedica.getRiskFactor('lt_350').then(riskFactor => {
+infermedica.getRiskFactor('p_28').then(riskFactor => {
     console.log(riskFactor)
 })
 ```
