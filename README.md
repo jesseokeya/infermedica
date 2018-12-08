@@ -54,7 +54,7 @@ infermedica.postTriage(context).then(res => {
 // Returns a list of all available conditions
 infermedica.getConditions()
 
-//Returns details of a single condition specified by id parameter 
+// Returns details of a single condition specified by id parameter 
 infermedica.getCondition(conditionId)
 
 // Suggests possible diagnoses and relevant observations
@@ -113,6 +113,84 @@ const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process
 
 infermedica.getConditions().then(conditions => {
     console.log(conditons)
+})
+```
+
+### getAllCondition
+Returns details of a single condition specified by id parameter 
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+infermedica.getCondition('c_522').then(condition => {
+    console.log(conditon)
+})
+```
+
+### postDiagnosis
+Suggests possible diagnoses and relevant observations
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+const context = {
+    sex: "male",
+    age: 70,
+    evidence: [
+        {
+            "id": "s_1193",
+            "choice_id": "present"
+        },
+        {
+            "id": "s_488",
+            "choice_id": "present"
+        },
+        {
+            "id": "s_418",
+            "choice_id": "present"
+        }
+    ]
+}
+
+infermedica.postDiagnosis(context).then(diagnosis => {
+    console.log(diagnosis)
+})
+```
+
+### postExplain
+Explains which evidence impact probability of selected condition
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+const context = {
+    sex: "male",
+    age: 70,
+    target: "c_49",
+    evidence: [
+        {
+            "id": "s_1193",
+            "choice_id": "present"
+        },
+        {
+            "id": "s_488",
+            "choice_id": "present"
+        },
+        {
+            "id": "s_418",
+            "choice_id": "present"
+        }
+    ]
+}
+
+infermedica.postExplain(context).then(explain => {
+    console.log(explain)
 })
 ```
 
