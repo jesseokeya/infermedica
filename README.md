@@ -194,4 +194,41 @@ infermedica.postExplain(context).then(explain => {
 })
 ```
 
+### getInfo
+Returns information about data used by diagnostic engine
 
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+infermedica.getInfo().then(info => {
+    console.log(info)
+})
+```
+
+### getLabTests
+Returns a list of all available lab tests
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+infermedica.getLabTests().then(labTests => {
+    console.log(labTests)
+})
+```
+
+### getLabTest
+Returns details of a single lab test specified by id parameter
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+infermedica.getLabTest('lt_350').then(labTest => {
+    console.log(labTest)
+})
+```
