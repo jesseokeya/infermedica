@@ -232,3 +232,38 @@ infermedica.getLabTest('lt_350').then(labTest => {
     console.log(labTest)
 })
 ```
+
+### getLookUp
+Returns a single observation matching given phrase
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+const context = {
+    sex: "female",
+    phrase: "headache"
+}
+
+infermedica.getLookUp(context).then(lookUp => {
+    console.log(lookUp)
+})
+```
+
+### postParse
+Returns list of mentions of observation found in given text
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+const context = {
+    "text": "I feel smoach pain but no couoghing today",
+}
+
+infermedica.postParse(context).then(parse => {
+    console.log(parse)
+})
+```
