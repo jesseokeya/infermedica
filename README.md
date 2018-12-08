@@ -341,7 +341,9 @@ const context = {
     ]
 }
 
-infermedica.postSuggest(context).then(suggest => {
+const maxResults = 8
+
+infermedica.postSuggest(context, maxResults).then(suggest => {
     console.log(suggest)
 })
 ```

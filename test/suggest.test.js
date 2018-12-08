@@ -1,6 +1,7 @@
 const infermedica = require('./index')
 
 test('postSuggest(context)', async () => {
+
     const context = {
         sex: "mAle",
         age: 70,
@@ -20,7 +21,9 @@ test('postSuggest(context)', async () => {
         ]
     }
 
-    const suggest = await infermedica.postSuggest(context)
+    const maxResults = 8
+
+    const suggest = await infermedica.postSuggest(context, maxResults)
     expect(typeof suggest).toEqual('object')
     expect(suggest).toMatchObject(suggest)
 })
