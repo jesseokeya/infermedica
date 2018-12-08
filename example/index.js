@@ -1,5 +1,5 @@
 const Infermedica = require('../index')
-const infermedica = new Infermedica({ appId: '', appKey: '' })
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
 
 const context = {
     sex: "male",

@@ -1,4 +1,4 @@
 const Infermedica = require('../')
-const infermedica = new Infermedica({ appId: '72c76576', appKey: '2c63689dc7de4d0cab1967cb1cd09ef7' })
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
 
 module.exports = infermedica

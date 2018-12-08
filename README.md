@@ -13,8 +13,15 @@ This is a Node interface to the Infermedica REST API: https://developer.infermed
 
 #### Estimate triage level based on provided patient information
 ```js
+
 const Infermedica = require('infermedica')
-const infermedica = new Infermedica({ appId: '', appKey: '' })
+/** 
+ * Provide credentials
+ * This reference can help you explore the Infermedica API with your own data. 
+ * Make sure that your application id and application key are correct and get started. 
+ * Below they are passed in as environment variables
+ */
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
 
 const context = {
     sex: "male",
