@@ -103,7 +103,7 @@ infermedica.postTriage({ sex, age, evidence, extras, evaluated_at })
 
 ## Actions
 
-### getAllConditions
+### getConditions
 Returns a list of all available conditions.
 
 ```js
@@ -116,7 +116,7 @@ infermedica.getConditions().then(conditions => {
 })
 ```
 
-### getAllCondition
+### getCondition
 Returns details of a single condition specified by id parameter 
 
 ```js
@@ -291,5 +291,116 @@ const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process
 
 infermedica.getRiskFactor('lt_350').then(riskFactor => {
     console.log(riskFactor)
+})
+```
+
+### getSearch
+Returns list of observations matching the given phrase
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+const context = {
+    sex: "male",
+    phrase: "stomache pain",
+    type: "symptom",
+    maxResults: 8
+}
+
+infermedica.getSearch(context).then(search => {
+    console.log(search)
+})
+```
+
+### postSuggest
+Suggests possible symptoms based on provided patient information
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+const context = {
+    sex: "male",
+    age: 70,
+    evidence: [
+        {
+            "id": "s_1193",
+            "choice_id": "present"
+        },
+        {
+            "id": "s_488",
+            "choice_id": "present"
+        },
+        {
+            "id": "s_418",
+            "choice_id": "present"
+        }
+    ]
+}
+
+infermedica.postSuggest(context).then(suggest => {
+    console.log(suggest)
+})
+```
+
+### getSymptoms
+Returns a list of all available symptoms
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+infermedica.getSymptoms().then(symptoms => {
+    console.log(symptoms)
+})
+```
+
+### getSymptom
+Returns details of a single symptom specified by id parameter 
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+infermedica.getSymptom('s_1190').then(symptom => {
+    console.log(symptom)
+})
+```
+
+
+### postTriage
+Estimates triage level based on provided patient information
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+ const context = {
+    sex: "male",
+    age: 70,
+    evidence: [
+        {
+            "id": "s_1193",
+            "choice_id": "present"
+        },
+        {
+            "id": "s_488",
+            "choice_id": "present"
+        },
+        {
+            "id": "s_418",
+            "choice_id": "present"
+        }
+    ]
+}
+
+infermedica.postTriage(context).then(triage => {
+    console.log(triage)
 })
 ```
