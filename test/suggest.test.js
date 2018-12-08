@@ -2,7 +2,7 @@ const infermedica = require('./index')
 
 test('postSuggest()', async () => {
     const context = {
-        sex: "male",
+        sex: "mAle",
         age: 70,
         evidence: [
             {

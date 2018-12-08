@@ -2,8 +2,8 @@ const infermedica = require('./index')
 
 test('getLookUp()', async () => {
     const context = {
-        sex: "male",
-        phrase: "headache"
+        sex: "FemAle",
+        phrase: "Headache"
     }
     const lookup = await infermedica.getLookUp(context)
     expect(typeof lookup).toEqual('object')

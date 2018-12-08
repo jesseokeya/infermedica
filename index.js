@@ -1,5 +1,13 @@
+/*!
+ * Infermedica.
+ *
+ * Main entry file.
+ * @author Jesse Okeya <jesseokeya@gmail.com>
+ * @created 07/12/2018 NZDT
+ */
 const classes = require('extends-classes')
 const axios = require('axios')
+
 const {
     Condition,
     Info,
@@ -41,10 +49,21 @@ class Infermedica extends Classes {
         this.appKey = appKey
     }
 
+    /**
+     * Gives context to methods called and thier parameters
+     * @param {Object} method 
+     * @param {Object} args
+     * @throws {Error} throws an error if error occurs
+     */
     __call(method, args) {
         console.log(`${method.toString()}(${args.toString() || ''}) is missing!`);
     }
 
+    /**
+     * Handles errors that occur while applicationnis running
+     * @param {Object} err - An error object
+     * @throws {Error} throws an error if error occurs
+     */
     _handleError(err) {
         let errorCtx
         if (err.response) {

@@ -2,8 +2,8 @@ const infermedica = require('./')
 
 test('postExplain()', async () => {
     const context = {
-        sex: "male",
-        age: 70,
+        sex: "malE",
+        age: '70',
         target: "c_49",
         evidence: [
             {

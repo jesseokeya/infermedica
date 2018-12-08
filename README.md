@@ -78,12 +78,6 @@ infermedica.getRiskFactors()
 // Returns details of a single risk factor specified by id parameter
 infermedica.getRiskFactor(riskFactorId) 
 
-// Returns a list of all available risk factors
-infermedica.getRiskFactors()
-
-// Returns details of a single risk factor specified by id parameter
-infermedica.getRiskFactor(riskFactorId)
-
 // Returns list of observations matching the given phrase
 infermedica.getSearch({ phrase, sex, maxResults, type })
 

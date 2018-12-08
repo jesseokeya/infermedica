@@ -2,9 +2,9 @@ const infermedica = require('./index')
 
 test('getSearch()', async () => {
     const context = {
-        sex: "male",
-        phrase: "stomache pain",
-        type: "symptom",
+        sex: "malE",
+        phrase: "Stomache pain",
+        type: "Symptom",
         maxResults: 8
     }
     const search = await infermedica.getSearch(context)

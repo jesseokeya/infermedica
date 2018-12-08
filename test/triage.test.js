@@ -2,8 +2,8 @@ const infermedica = require('./index')
 
 test('postTriage()', async () => {
     const context = {
-        sex: "male",
-        age: 70,
+        sex: "malE",
+        age: '70',
         evidence: [
             {
                 "id": "s_1193",
