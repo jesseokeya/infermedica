@@ -55,7 +55,7 @@ infermedica.postTriage(context).then(res => {
 infermedica.getConditions()
 
 //Returns details of a single condition specified by id parameter 
-infermedica.getConditions(conditionId)
+infermedica.getCondition(conditionId)
 
 // Suggests possible diagnoses and relevant observations
 infermedica.postDiagnosis({ sex, age, evidence, extras, target, evaluated_at }) 
