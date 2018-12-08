@@ -1,6 +1,6 @@
 const infermedica = require('./index')
 
-test('getLookUp()', async () => {
+test('getLookUp(context)', async () => {
     const context = {
         sex: "FemAle",
         phrase: "Headache"

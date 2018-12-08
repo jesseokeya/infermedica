@@ -6,7 +6,7 @@ test('getSymptoms()', async () => {
   expect(typeof symptoms).toEqual('object')
 });
 
-test('getSymptom()', async () => {
+test('getSymptom(context)', async () => {
   const symptom = await infermedica.getSymptom('s_1190')
   expect(symptom).toMatchObject(symptom);
   expect(typeof symptom).toEqual('object')

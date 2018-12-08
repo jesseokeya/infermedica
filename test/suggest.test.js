@@ -1,6 +1,6 @@
 const infermedica = require('./index')
 
-test('postSuggest()', async () => {
+test('postSuggest(context)', async () => {
     const context = {
         sex: "mAle",
         age: 70,

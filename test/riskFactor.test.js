@@ -6,7 +6,7 @@ test('getRiskFactors()', async () => {
   expect(typeof riskFactors).toEqual('object')
 });
 
-test('getRiskFactor()', async () => {
+test('getRiskFactor(riskFactorId)', async () => {
   const riskFactor = await infermedica.getRiskFactor('p_28')
   expect(riskFactor).toMatchObject(riskFactor);
   expect(typeof riskFactor).toEqual('object')

@@ -1,6 +1,6 @@
 const infermedica = require('./index')
 
-test('postTriage()', async () => {
+test('postTriage(context)', async () => {
     const context = {
         sex: "malE",
         age: '70',

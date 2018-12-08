@@ -1,6 +1,6 @@
 const infermedica = require('./index')
 
-test('getSearch()', async () => {
+test('getSearch(context)', async () => {
     const context = {
         sex: "malE",
         phrase: "Stomache pain",

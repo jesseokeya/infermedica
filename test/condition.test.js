@@ -6,7 +6,7 @@ test('getConditions()', async () => {
   expect(typeof conditions).toEqual('object')
 });
 
-test('getCondition()', async () => {
+test('getCondition(conditionId)', async () => {
   const condition = await infermedica.getCondition('c_522')
   expect(condition).toMatchObject(condition);
 })

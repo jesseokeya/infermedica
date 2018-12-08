@@ -1,6 +1,6 @@
 const infermedica = require('./index')
 
-test('postParse()', async () => {
+test('postParse(context)', async () => {
     const context = {
         "text": "I feel smoach pain but no couoghing today",
     }

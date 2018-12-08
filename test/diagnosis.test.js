@@ -1,6 +1,6 @@
 const infermedica = require('./')
 
-test('postDiagnosis()', async () => {
+test('postDiagnosis(context)', async () => {
     const context = {
         sex: "MalE",
         age: '70',
