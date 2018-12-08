@@ -20,7 +20,10 @@ const Infermedica = require('infermedica')
  * Make sure that your application id and application key are correct and get started. 
  * Below they are passed in as environment variables
  */
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 const context = {
     sex: "male",
@@ -58,10 +61,24 @@ infermedica.getConditions()
 infermedica.getCondition(conditionId)
 
 // Suggests possible diagnoses and relevant observations
-infermedica.postDiagnosis({ sex, age, evidence, extras, target, evaluated_at }) 
+infermedica.postDiagnosis({ 
+    sex, 
+    age, 
+    evidence, 
+    extras, 
+    target, 
+    evaluated_at 
+}) 
 
 // Explains which evidence impact probability of selected condition
-infermedica.postExplain({ sex, age, evidence, extras, target, evaluated_at })
+infermedica.postExplain({ 
+    sex, 
+    age, 
+    evidence, 
+    extras, 
+    target, 
+    evaluated_at 
+})
 
 // Returns information about data used by diagnostic engine
 infermedica.getInfo() 
@@ -76,7 +93,13 @@ infermedica.getLabTest(labTestId)
 infermedica.getLookUp({ phrase, sex })
 
 // Returns list of mentions of observation found in given text
-infermedica.postParse({ text, context, concept_types, correct_spelling, include_tokens })
+infermedica.postParse({ 
+    text, 
+    context, 
+    concept_types, 
+    correct_spelling, 
+    include_tokens 
+})
 
 // Returns a list of all available risk factors
 infermedica.getRiskFactors()
@@ -85,10 +108,20 @@ infermedica.getRiskFactors()
 infermedica.getRiskFactor(riskFactorId) 
 
 // Returns list of observations matching the given phrase
-infermedica.getSearch({ phrase, sex, maxResults, type })
+infermedica.getSearch({ 
+    phrase, 
+    sex, 
+    maxResults, 
+    type 
+})
 
 // Suggests possible symptoms based on provided patient information
-infermedica.postSuggest({ sex, age, evidence, extras, evaluated_at }, max_results)
+infermedica.postSuggest({ 
+    sex, 
+    age, 
+    evidence, 
+    extras, 
+    evaluated_at }, max_results)
 
 // Returns a list of all available symptoms
 infermedica.getSymptoms()
@@ -97,7 +130,13 @@ infermedica.getSymptoms()
 infermedica.getSymptom(symptomId)
 
 // Estimates triage level based on provided patient information
-infermedica.postTriage({ sex, age, evidence, extras, evaluated_at })
+infermedica.postTriage({ 
+    sex, 
+    age, 
+    evidence, 
+    extras, 
+    evaluated_at
+})
 
 ```
 
@@ -109,7 +148,10 @@ Returns a list of all available conditions.
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 infermedica.getConditions().then(conditions => {
     console.log(conditons)
@@ -122,7 +164,10 @@ Returns details of a single condition specified by id parameter
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 infermedica.getCondition('c_522').then(condition => {
     console.log(conditon)
@@ -135,7 +180,10 @@ Suggests possible diagnoses and relevant observations
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 const context = {
     sex: "male",
@@ -167,7 +215,10 @@ Explains which evidence impact probability of selected condition
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 const context = {
     sex: "male",
@@ -200,7 +251,10 @@ Returns information about data used by diagnostic engine
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 infermedica.getInfo().then(info => {
     console.log(info)
@@ -213,7 +267,10 @@ Returns a list of all available lab tests
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 infermedica.getLabTests().then(labTests => {
     console.log(labTests)
@@ -226,7 +283,10 @@ Returns details of a single lab test specified by id parameter
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 infermedica.getLabTest('lt_350').then(labTest => {
     console.log(labTest)
@@ -239,7 +299,10 @@ Returns a single observation matching given phrase
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY
+})
 
 const context = {
     sex: "female",
@@ -257,7 +320,10 @@ Returns list of mentions of observation found in given text
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 const context = {
     "text": "I feel smoach pain but no couoghing today",
@@ -274,7 +340,10 @@ Returns a list of all available risk factors
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 infermedica.getRiskFactors().then(riskFactors => {
     console.log(riskFactors)
@@ -287,7 +356,10 @@ Returns details of a single risk factor specified by id parameter
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 infermedica.getRiskFactor('lt_350').then(riskFactor => {
     console.log(riskFactor)
@@ -300,7 +372,10 @@ Returns list of observations matching the given phrase
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 const context = {
     sex: "male",
@@ -320,7 +395,10 @@ Suggests possible symptoms based on provided patient information
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 const context = {
     sex: "male",
@@ -354,7 +432,10 @@ Returns a list of all available symptoms
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 infermedica.getSymptoms().then(symptoms => {
     console.log(symptoms)
@@ -367,7 +448,10 @@ Returns details of a single symptom specified by id parameter
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
 infermedica.getSymptom('s_1190').then(symptom => {
     console.log(symptom)
@@ -381,7 +465,10 @@ Estimates triage level based on provided patient information
 ```js
 const Infermedica = require('infermedica')
 
-const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+const infermedica = new Infermedica({ 
+    appId: process.env.APP_ID, 
+    appKey: process.env.APP_KEY 
+})
 
  const context = {
     sex: "male",
