@@ -1,9 +1,8 @@
 # Infermedica (unofficial)
-Node interface to the infermedica REST API https://www.npmjs.com/package/infermedica
+Node Interface To The Infermedica Rest Api. [Npm Package](https://www.npmjs.com/package/infermedica)
 
 ## Description
-
-This is a Node interface to the Infermedica REST API: https://developer.infermedica.com/docs/api
+This is a Node interface to the Infermedica [Rest Api](https://developer.infermedica.com/docs/api).
 
 ## Installation
 
