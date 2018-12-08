@@ -2,7 +2,6 @@ const infermedica = require('./')
 
 test('getSymptoms()', async () => {
   const symptoms = await infermedica.getSymptoms()
-  console.log(symptoms)
   expect(symptoms).toEqual(expect.arrayContaining(symptoms))
   expect(typeof symptoms).toEqual('object')
 });
