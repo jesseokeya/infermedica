@@ -101,4 +101,19 @@ infermedica.postTriage({ sex, age, evidence, extras, evaluated_at })
 
 ```
 
+## Actions
+
+### getAllConditions
+Returns a list of all available conditions.
+
+```js
+const Infermedica = require('infermedica')
+
+const infermedica = new Infermedica({ appId: process.env.APP_ID, appKey: process.env.APP_KEY })
+
+infermedica.getConditions().then(conditions => {
+    console.log(conditons)
+})
+```
+
 
