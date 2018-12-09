@@ -154,7 +154,7 @@ const infermedica = new Infermedica({
 })
 
 infermedica.getConditions().then(conditions => {
-    console.log(conditons)
+    console.log(conditions)
 })
 ```
 
@@ -170,7 +170,7 @@ const infermedica = new Infermedica({
 })
 
 infermedica.getCondition('c_522').then(condition => {
-    console.log(conditon)
+    console.log(condition)
 })
 ```
 
