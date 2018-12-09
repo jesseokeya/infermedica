@@ -1,6 +1,6 @@
 {
   "name": "infermedica",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Node interface to the Infermedica REST API: https://developer.infermedica.com/docs/api",
   "main": "index.js",
   "scripts": {

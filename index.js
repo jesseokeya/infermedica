@@ -70,49 +70,52 @@ class Infermedica extends Classes {
             const status = err.response.status
             switch (status) {
                 case 400:
-                    errorCtx = {
+                    errorCtx = JSON.stringify({
                         statusText: err.response.statusText,
                         status,
                         message: `Request Error: invalid JSON (e.g. extra comma), missing or invalid parameter (e.g. missing fields in request body)`,
                         method: err.response.config.method.toUpperCase(),
                         url: err.response.config.url,
-                        data: err.response.config.data || ""
-                    }
+                        data: err.response.config.data || "",
+                        stack: err.stack.toString()
+                    }, null, 4)
                     break
                 case 403:
-                    errorCtx = {
+                    errorCtx = JSON.stringify({
                         statusText: err.response.statusText,
                         status,
                         message: `Request Error: missing or invalid credentials for App-Id: ${this.appId} or App-Key: ${this.appKey}`,
                         method: err.response.config.method.toUpperCase(),
                         url: err.response.config.url,
-                        data: err.response.config.data || ""
-                    }
+                        data: err.response.config.data || "",
+                        stack: err.stack.toString()
+                    }, null, 4)
                     break
                 case 404:
-                    errorCtx = {
+                    errorCtx = JSON.stringify({
                         statusText: err.response.statusText,
                         status,
                         message: `Request Error: invalid URL or object not found`,
                         method: err.response.config.method.toUpperCase(),
                         url: err.response.config.url,
-                        data: err.response.config.data || ""
-                    }
+                        data: err.response.config.data || "",
+                        stack: err.stack.toString()
+                    }, null, 4)
                     break
                 case 405:
-                    errorCtx = {
+                    errorCtx = JSON.stringify({
                         statusText: err.response.statusText,
                         status,
                         message: `Request Error: invalid HTTP method (e.g. GET instead of POST)`,
                         method: err.response.config.method.toUpperCase(),
                         url: err.response.config.url,
-                        data: err.response.config.data || ""
-                    }
+                        data: err.response.config.data || "",
+                        stack: err.stack.toString()
+                    }, null, 4)
             }
         } else {
-            errorCtx = err
+            errorCtx = err.stack.toString()
         }
-        errorCtx = JSON.stringify(errorCtx, null, 4)
         throw new Error(errorCtx)
     }
 }
