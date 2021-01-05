@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/jesseokeya/infermedica#readme",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "extends-classes": "^1.0.5"
   },
   "devDependencies": {
